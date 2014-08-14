@@ -34,6 +34,7 @@ define Package/libjpeg
   $(call Package/jpeg/Default)
   SECTION:=libs
   CATEGORY:=Libraries
+  PROVIDES:=jpeg-library
   TITLE+= runtime library
 endef
 

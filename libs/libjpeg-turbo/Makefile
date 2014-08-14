@@ -32,6 +32,7 @@ define Package/libjpeg-turbo
   $(call Package/libjpeg-turbo/Default)
   SECTION:=libs
   CATEGORY:=Libraries
+  PROVIDES:=jpeg-library
   TITLE+= runtime library
 endef
 
