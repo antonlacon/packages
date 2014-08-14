@@ -35,7 +35,7 @@ define Package/libjpeg-turbo
   TITLE+= runtime library
 endef
 
-define Package/jpeg-tools
+define Package/libjpeg-turbo-tools
   $(call Package/libjpeg-turbo/Default)
   SECTION:=utils
   CATEGORY:=Utilities
@@ -78,7 +78,7 @@ define Package/libjpeg-turbo/install
 	$(CP) $(PKG_BUILD_DIR)/.libs/libjpeg.{a,so*} $(1)/usr/lib/
 endef
 
-define Package/jpeg-tools/install
+define Package/libjpeg-turbo-tools/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/.libs/{c,d}jpeg $(1)/usr/bin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/.libs/jpegtran $(1)/usr/bin/
@@ -96,5 +96,5 @@ endef
 
 $(eval $(call HostBuild))
 $(eval $(call BuildPackage,libjpeg-turbo))
-$(eval $(call BuildPackage,jpeg-tools))
+$(eval $(call BuildPackage,libjpeg-turbo-tools))
 $(eval $(call BuildPackage,libjpeg-turbo-tests))

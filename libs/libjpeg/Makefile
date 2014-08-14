@@ -37,7 +37,7 @@ define Package/libjpeg
   TITLE+= runtime library
 endef
 
-define Package/jpeg-tools
+define Package/libjpeg-tools
   $(call Package/jpeg/Default)
   SECTION:=utils
   CATEGORY:=Utilities
@@ -80,11 +80,11 @@ define Package/libjpeg/install
 	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libjpeg.so.* $(1)/usr/lib/
 endef
 
-define Package/jpeg-tools/install
+define Package/libjpeg-tools/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_INSTALL_DIR)/usr/bin/*jpeg* $(1)/usr/bin/
 endef
 
 $(eval $(call HostBuild))
 $(eval $(call BuildPackage,libjpeg))
-$(eval $(call BuildPackage,jpeg-tools))
+$(eval $(call BuildPackage,libjpeg-tools))
