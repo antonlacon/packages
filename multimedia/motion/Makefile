@@ -29,7 +29,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/motion
   SECTION:=multimedia
   CATEGORY:=Multimedia
-  DEPENDS:=+libjpeg +libpthread
+  DEPENDS:=+jpeg-library +libpthread
   TITLE:=webcam motion sensing and logging
   URL:=http://www.lavrsen.dk/twiki/bin/view/Motion/WebHome
 endef

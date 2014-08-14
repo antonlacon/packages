@@ -28,7 +28,7 @@ define Package/mjpg-streamer
   SECTION:=multimedia
   CATEGORY:=Multimedia
   TITLE:=MJPG-streamer
-  DEPENDS:=+libpthread +libjpeg 
+  DEPENDS:=+libpthread +jpeg-lib
   ifeq ($(CONFIG_MJPG_STREAMER_V4L2),y)
 	DEPENDS+=+libv4l
   endif

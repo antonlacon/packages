@@ -29,7 +29,7 @@ define Package/vips
   TITLE:=An image manipulation library
   URL:=http://www.vips.ecs.soton.ac.uk/
   MAINTAINER:=W. Michael Petullo <mike@flyn.org>
-  DEPENDS:=+glib2 +libexif +libjpeg +libpng +libxml2 $(INTL_DEPENDS)
+  DEPENDS:=+glib2 +libexif +jpeg-library +libpng +libxml2 $(INTL_DEPENDS)
 endef
 
 TARGET_LDFLAGS+= \
