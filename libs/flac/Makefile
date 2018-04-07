@@ -34,6 +34,12 @@ define Package/libflac
   URL:=https://xiph.org/flac
 endef
 
+ifneq ($(findstring arm,$(CONFIG_ARCH)),)
+        TARGET_CFLAGS += -flto
+        TARGET_CXXFLAGS += -flto
+        TARGET_LDFLAGS += -flto
+endif
+
 CONFIGURE_ARGS += \
 	--disable-cpplibs \
 	--disable-sse \
